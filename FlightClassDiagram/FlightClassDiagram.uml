@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1xbr8Ba3EeiCHewl_R7v9A" name="FlightClassDiagram">
+  <ownedRule xmi:type="uml:Constraint" xmi:id="_MmyYEBjyEeiYX4xBjIS6rg" name="Constraint 6">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_MmyYERjyEeiYX4xBjIS6rg" name="constraintSpec">
+      <language>OCL</language>
+      <body>self.departure_from->excludes(self.land_on)</body>
+    </specification>
+  </ownedRule>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_2MWGUBa3EeiCHewl_R7v9A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5cnkQBa3EeiCHewl_R7v9A" name="Person" isAbstract="true">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_rAdT8BjsEeiYX4xBjIS6rg" name="Constraint 1">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_rAdT8RjsEeiYX4xBjIS6rg" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.oclIsTypeOf(Customer) implies (self.have_rights_to.canUpdateFlight = false &#xD;
+	and self.have_rights_to.canSearchFlight = true)</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_0Ju1EBl6EeiztcYu6I795w" name="Constraint2">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_0JzGgBl6EeiztcYu6I795w" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.oclIsTypeOf (Employee)implies (self.have_rights_to.canUpdateFlight = true &#xD;
+	and self.have_rights_to.canSearchFlight = true)</body>
+      </specification>
+    </ownedRule>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HI68MBa4EeiCHewl_R7v9A" name="name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_R_D_UBa4EeiCHewl_R7v9A" name="address" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YzWWkBa4EeiCHewl_R7v9A" name="email" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fycVcBjCEeiaw5PUii3uHQ" name="have_rights_to" type="_DBt8EBjCEeiaw5PUii3uHQ" association="_fx6J8BjCEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fyeKoBjCEeiaw5PUii3uHQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fyfYwBjCEeiaw5PUii3uHQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DMzaoBjWEeiYX4xBjIS6rg" name="gender" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Ja2RQBjWEeiYX4xBjIS6rg" name="birthDate" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_F0tHcBjKEeir1uGSrOtX-A" name="login"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_F0zOEBjKEeir1uGSrOtX-A" name="logout"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jR1HoBa4EeiCHewl_R7v9A" name="Customer">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_fBtGIBjwEeiYX4xBjIS6rg" name="Contraint 3">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_fBtGIRjwEeiYX4xBjIS6rg" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.own.is_for.contain->includesAll(self.own.indicate)</body>
+      </specification>
+    </ownedRule>
+    <generalization xmi:type="uml:Generalization" xmi:id="_rf9NYBa9EeiCHewl_R7v9A" general="_5cnkQBa3EeiCHewl_R7v9A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zDaxEBa4EeiCHewl_R7v9A" name="userName" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DD5LEBa5EeiCHewl_R7v9A" name="paymentInfo" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Oylm0Ba5EeiCHewl_R7v9A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OyvX0Ba5EeiCHewl_R7v9A" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZLsIoBa5EeiCHewl_R7v9A" name="isRegistered" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_kS-mIBa5EeiCHewl_R7v9A" name="logedIn" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MWRJQRjFEeiaw5PUii3uHQ" name="own" type="_I5XUMBa6EeiCHewl_R7v9A" association="_MWOtABjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MWRwUBjFEeiaw5PUii3uHQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MWSXYBjFEeiaw5PUii3uHQ" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qosLABa5EeiCHewl_R7v9A" name="register"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QvxjUBjJEeiaw5PUii3uHQ" name="bookFlight" postcondition="_HMWqEBl-EeiztcYu6I795w" precondition="_MS3tYBl9EeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_MS3tYBl9EeiztcYu6I795w" name="BookingFlight_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_MS47gBl9EeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.isRegistered = true and self.logedIn = true &#xD;
+and self.own->excludes(b)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_HMWqEBl-EeiztcYu6I795w" name="BookingFlight_PostCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_HMWqERl-EeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->includes(b) and b.isPaid = true &#xD;
+and b.isConfirmed =true</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Qa9UoBjvEeiYX4xBjIS6rg" name="b" type="_I5XUMBa6EeiCHewl_R7v9A"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zMmj4BjJEeir1uGSrOtX-A" name="cancelBooking" postcondition="_DCFMkBl_EeiztcYu6I795w" precondition="_wUAj4Bl-EeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_wUAj4Bl-EeiztcYu6I795w" name="CancelBooking_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_wUBK8Bl-EeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.isRegistered = true and self.logedIn = true &#xD;
+and self.own->includes(b)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_DCFMkBl_EeiztcYu6I795w" name="CancelBooking_PostCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_DCFzoBl_EeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->excludes(b)</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xf7MMBjvEeiYX4xBjIS6rg" name="b" type="_I5XUMBa6EeiCHewl_R7v9A"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3Rri4BjJEeir1uGSrOtX-A" name="makePayment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dP5mwBjvEeiYX4xBjIS6rg" name="b" type="_I5XUMBa6EeiCHewl_R7v9A"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9EuBcBa5EeiCHewl_R7v9A" name="Employee">
+    <generalization xmi:type="uml:Generalization" xmi:id="_wD1oQBa9EeiCHewl_R7v9A" general="_5cnkQBa3EeiCHewl_R7v9A"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Bu0ZEBa6EeiCHewl_R7v9A" name="employeeId" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I5XUMBa6EeiCHewl_R7v9A" name="Booking">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_o_i_IBl7EeiztcYu6I795w" name="Constraint 4">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_o_kNQBl7EeiztcYu6I795w" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.indicate->size() &lt;= self.is_for.contain->size()</body>
+      </specification>
+    </ownedRule>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LdwjkBa6EeiCHewl_R7v9A" name="bookingId" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QUY7UBa6EeiCHewl_R7v9A" name="isConfirmed" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZVZo0Ba6EeiCHewl_R7v9A" name="isPaid" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_B_MAsRjFEeiaw5PUii3uHQ" name="indicate" type="_Xy9TwBa8EeiCHewl_R7v9A" association="_B_KLgBjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B_MnwBjFEeiaw5PUii3uHQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B_NO0BjFEeiaw5PUii3uHQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8L9y8BjGEeiaw5PUii3uHQ" name="is_for" type="_wczpQBa6EeiCHewl_R7v9A" association="_8L5hgBjGEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8L_BEBjGEeiaw5PUii3uHQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8L_oIBjGEeiaw5PUii3uHQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HtmVABjFEeiaw5PUii3uHQ" name="printTicket" precondition="_-q4GUBl_EeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_-q4GUBl_EeiztcYu6I795w" name="printTicket_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_-q5UcBl_EeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.isConfirmed = true and self.isPaid = true</body>
+        </specification>
+      </ownedRule>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_eTNdsBjKEeir1uGSrOtX-A" name="addSeat" postcondition="_jlA20BmAEeiztcYu6I795w" precondition="_QhdGUBmAEeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_QhdGUBmAEeiztcYu6I795w" name="addSeat_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_QhdtYBmAEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.indicate->excludes(s) and s.isAvailable=true</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_jlA20BmAEeiztcYu6I795w" name="addSeat_PostCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_jlBd4BmAEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.indicate->includes(s) and s.isAvailable=false</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_aCLskBj6EeiYX4xBjIS6rg" name="s" type="_Xy9TwBa8EeiCHewl_R7v9A"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wczpQBa6EeiCHewl_R7v9A" name="ScheduledFlight">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZM4wkBa7EeiCHewl_R7v9A" name="departureDate" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mC5ZsBa7EeiCHewl_R7v9A" name="price" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BN5tsRjFEeiaw5PUii3uHQ" name="contain" type="_Xy9TwBa8EeiCHewl_R7v9A" association="_BN2qYBjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BN670BjFEeiaw5PUii3uHQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BN7i4BjFEeiaw5PUii3uHQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_b4eS4RjFEeiaw5PUii3uHQ" name="correspond_to" type="_n0TdoBjDEeiaw5PUii3uHQ" association="_b4cdsBjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b4fhABjFEeiaw5PUii3uHQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b4fhARjFEeiaw5PUii3uHQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8MAPMBjGEeiaw5PUii3uHQ" name="has" type="_I5XUMBa6EeiCHewl_R7v9A" association="_8L5hgBjGEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cJN5EBjPEeir1uGSrOtX-A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cJUmwBjPEeir1uGSrOtX-A" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zcbmoBa7EeiCHewl_R7v9A" name="FlightRepository">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZMJPgBjFEeiaw5PUii3uHQ" name="own" visibility="private" type="_wczpQBa6EeiCHewl_R7v9A" association="_ZMGzQBjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZMKdoBjFEeiaw5PUii3uHQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZMLEsBjFEeiaw5PUii3uHQ" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_17L8QBdkEei0rfGbJO9cXg" name="addFlight" postcondition="_g3ttoBmBEeiztcYu6I795w" precondition="_TuaVEBmBEeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_TuaVEBmBEeiztcYu6I795w" name="addFlight_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_Tua8IBmBEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->excludes(sf)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_g3ttoBmBEeiztcYu6I795w" name="addFlight_PostCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_g3ttoRmBEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->includes(sf)</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pVZY8BjvEeiYX4xBjIS6rg" name="sf" type="_wczpQBa6EeiCHewl_R7v9A"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_261bYBdkEei0rfGbJO9cXg" name="deleteFlight" visibility="public" postcondition="_3WVPwBmBEeiztcYu6I795w" precondition="_tDpfABmBEeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_tDpfABmBEeiztcYu6I795w" name="deleteFlight_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_tDqGEBmBEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->includes(sf)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_3WVPwBmBEeiztcYu6I795w" name="deleteFlight_PostCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_3WV20BmBEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->excludes(sf)</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vWs0EBjvEeiYX4xBjIS6rg" name="sf" type="_wczpQBa6EeiCHewl_R7v9A"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3hJNcBdkEei0rfGbJO9cXg" name="modifyFlight" postcondition="_df618BmCEeiztcYu6I795w" precondition="_Os5tkBmCEeiztcYu6I795w">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_Os5tkBmCEeiztcYu6I795w" name="modifyFlight_PreCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_Os6UoBmCEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->includes(sf)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_df618BmCEeiztcYu6I795w" name="modifyFlight_PostCondition">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_df7dABmCEeiztcYu6I795w" name="constraintSpec">
+          <language>OCL</language>
+          <body>self.own->includes(sf)</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zdZjsBjvEeiYX4xBjIS6rg" name="sf" type="_wczpQBa6EeiCHewl_R7v9A"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-1lkEBdnEei0rfGbJO9cXg" name="searchFlight"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Xy9TwBa8EeiCHewl_R7v9A" name="Seat">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_acFSIBa8EeiCHewl_R7v9A" name="seatNumber" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fjMV4Ba8EeiCHewl_R7v9A" name="isAvailable" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_n3S6EBa8EeiCHewl_R7v9A" name="Airport">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rZWEgBa8EeiCHewl_R7v9A" name="airportName" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1aSlABa8EeiCHewl_R7v9A" name="airportNameAbbreviation" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eLyZUBjFEeiaw5PUii3uHQ" name="is_in" type="_8-O3kBa8EeiCHewl_R7v9A" association="_eLtg0BjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eLzAYBjFEeiaw5PUii3uHQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eLzncBjFEeiaw5PUii3uHQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xzDS0BjQEeir1uGSrOtX-A" name="is_starting_point_for" type="_n0TdoBjDEeiaw5PUii3uHQ" association="_xyzbMBjQEeir1uGSrOtX-A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6K-AABjQEeir1uGSrOtX-A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6LEtsBjQEeir1uGSrOtX-A" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EZ__0xjREeir1uGSrOtX-A" name="is_destination_for" type="_n0TdoBjDEeiaw5PUii3uHQ" association="_EZ-xsBjREeir1uGSrOtX-A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S8uCYBjREeir1uGSrOtX-A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S80wEBjREeir1uGSrOtX-A" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8-O3kBa8EeiCHewl_R7v9A" name="City">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_uiNRQBmNEeiFdrTWPvFfoA" name="Constraint 8">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_uiPtgBmNEeiFdrTWPvFfoA" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.have->forAll(a1,a2 | a1&lt;>a2 implies &#xD;
+	a1.airportName&lt;> a2.airportName&#xD;
+)</body>
+      </specification>
+    </ownedRule>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__bfkMBa8EeiCHewl_R7v9A" name="cityName" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DoS70Ba9EeiCHewl_R7v9A" name="cityNameAbbreviation" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eLzncRjFEeiaw5PUii3uHQ" name="have" type="_n3S6EBa8EeiCHewl_R7v9A" association="_eLtg0BjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m4Ow8BkFEeiYX4xBjIS6rg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m4TCYBkFEeiYX4xBjIS6rg" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DBt8EBjCEeiaw5PUii3uHQ" name="Permission">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_H8E9QBjCEeiaw5PUii3uHQ" name="canUpdateFlight" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Kmc40BjCEeiaw5PUii3uHQ" name="canSearchFlight" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IwDdQBjVEeiYX4xBjIS6rg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IwNOQBjVEeiYX4xBjIS6rg" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fx6J8BjCEeiaw5PUii3uHQ" name="R1" memberEnd="_fycVcBjCEeiaw5PUii3uHQ _fyf_0BjCEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fyCFwBjCEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fyCs0BjCEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fyf_0BjCEeiaw5PUii3uHQ" name="is granted to" type="_5cnkQBa3EeiCHewl_R7v9A" association="_fx6J8BjCEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3Eu5wBjOEeir1uGSrOtX-A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3E21kBjOEeir1uGSrOtX-A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_n0TdoBjDEeiaw5PUii3uHQ" name="FlightTemplate">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_RtPg0Bl8EeiztcYu6I795w" name="Constraint 5">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_RtQu8Bl8EeiztcYu6I795w" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.is_used_by->forAll(sf1,sf2| sf1 &lt;> sf2 implies &#xD;
+	sf1.departureDate &lt;>sf2.departureDate)</body>
+      </specification>
+    </ownedRule>
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_YF044BmPEeiFdrTWPvFfoA" name="Constraint 7">
+      <specification xmi:type="uml:OpaqueExpression" xmi:id="_YF2HABmPEeiFdrTWPvFfoA" name="constraintSpec">
+        <language>OCL</language>
+        <body>self.departure_from.is_in -> &#xD;
+excludes(self.land_on.is_in)</body>
+      </specification>
+    </ownedRule>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_w_Z7QBjDEeiaw5PUii3uHQ" name="departureTime" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_w_aiUBjDEeiaw5PUii3uHQ" name="flightNumber" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xy_ocBjQEeir1uGSrOtX-A" name="departure_from" type="_n3S6EBa8EeiCHewl_R7v9A" association="_xyzbMBjQEeir1uGSrOtX-A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xzBdoBjQEeir1uGSrOtX-A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xzCrwBjQEeir1uGSrOtX-A" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EZ__0BjREeir1uGSrOtX-A" name="land_on" type="_n3S6EBa8EeiCHewl_R7v9A" association="_EZ-xsBjREeir1uGSrOtX-A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EZ__0RjREeir1uGSrOtX-A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EZ__0hjREeir1uGSrOtX-A" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_b4fhAhjFEeiaw5PUii3uHQ" name="is_used_by" type="_wczpQBa6EeiCHewl_R7v9A" association="_b4cdsBjFEeiaw5PUii3uHQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mGFVYBjQEeir1uGSrOtX-A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mGMqIBjQEeir1uGSrOtX-A" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LZEjcB9jEeiM0ZcxaiBNBg" name="flightDuration" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BN2qYBjFEeiaw5PUii3uHQ" name="R5" memberEnd="_BN5tsRjFEeiaw5PUii3uHQ _BN8J8BjFEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BN5GoBjFEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BN5tsBjFEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BN8J8BjFEeiaw5PUii3uHQ" name="is_for" type="_wczpQBa6EeiCHewl_R7v9A" association="_BN2qYBjFEeiaw5PUii3uHQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_B_KLgBjFEeiaw5PUii3uHQ" name="R4" memberEnd="_B_MAsRjFEeiaw5PUii3uHQ _B_N14BjFEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_B_LZoBjFEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_B_MAsBjFEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_B_N14BjFEeiaw5PUii3uHQ" name="is_assigned" type="_I5XUMBa6EeiCHewl_R7v9A" association="_B_KLgBjFEeiaw5PUii3uHQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_MWOtABjFEeiaw5PUii3uHQ" name="R2" memberEnd="_MWRJQRjFEeiaw5PUii3uHQ _MWSXYRjFEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MWQiMBjFEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MWRJQBjFEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MWSXYRjFEeiaw5PUii3uHQ" name="belong_to" type="_jR1HoBa4EeiCHewl_R7v9A" association="_MWOtABjFEeiaw5PUii3uHQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZMGzQBjFEeiaw5PUii3uHQ" name="R6" visibility="public" memberEnd="_ZMJPgBjFEeiaw5PUii3uHQ _ZMLEsRjFEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZMIocBjFEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMIocRjFEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZMLEsRjFEeiaw5PUii3uHQ" name="belong_to" type="_zcbmoBa7EeiCHewl_R7v9A" association="_ZMGzQBjFEeiaw5PUii3uHQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_b4cdsBjFEeiaw5PUii3uHQ" name="R7" memberEnd="_b4eS4RjFEeiaw5PUii3uHQ _b4fhAhjFEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b4dr0BjFEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b4eS4BjFEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_eLtg0BjFEeiaw5PUii3uHQ" name="R10" memberEnd="_eLyZUBjFEeiaw5PUii3uHQ _eLzncRjFEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eLxLMBjFEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eLxyQBjFEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8L5hgBjGEeiaw5PUii3uHQ" name="R3" memberEnd="_8L9y8BjGEeiaw5PUii3uHQ _8MAPMBjGEeiaw5PUii3uHQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8L79wBjGEeiaw5PUii3uHQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8L8k0BjGEeiaw5PUii3uHQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xyzbMBjQEeir1uGSrOtX-A" name="R8" memberEnd="_xy_ocBjQEeir1uGSrOtX-A _xzDS0BjQEeir1uGSrOtX-A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xy5h0BjQEeir1uGSrOtX-A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xy6v8BjQEeir1uGSrOtX-A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_EZ-xsBjREeir1uGSrOtX-A" name="R9" memberEnd="_EZ__0BjREeir1uGSrOtX-A _EZ__0xjREeir1uGSrOtX-A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EZ_YwBjREeir1uGSrOtX-A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EZ_YwRjREeir1uGSrOtX-A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+</uml:Model>
