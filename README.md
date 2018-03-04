@@ -10,7 +10,7 @@ Action Language to implement the project.
 You need to have "eclipse", "Papayrus", and "Java" installed and working.
 
 # Installing
-To install the project, you need to import the project in your eclipse.
+To install the project, you may import the project in your eclipse.
 
 # Project Team
 6 Ideas (Model Driven Software Engineering Course - Concordia University)
