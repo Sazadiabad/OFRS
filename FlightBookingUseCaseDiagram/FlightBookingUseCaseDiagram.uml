@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_6HMfsAudEeiLO-Oskdhn1g" name="FlightBookingUseCaseDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_6aWFMAudEeiLO-Oskdhn1g">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_80d-QAudEeiLO-Oskdhn1g" name="Customer"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-1c-kAudEeiLO-Oskdhn1g" name="FlightBooking">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_GDZL8AueEeiLO-Oskdhn1g" name="Search Flight"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QwdyoAueEeiLO-Oskdhn1g" name="Registration"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_TK8RAAueEeiLO-Oskdhn1g" name="Flight Reservation">
+      <include xmi:type="uml:Include" xmi:id="_Tjr2QAugEeiLO-Oskdhn1g" addition="_lTApoAueEeiLO-Oskdhn1g"/>
+      <include xmi:type="uml:Include" xmi:id="_UYld8AugEeiLO-Oskdhn1g" addition="_hwMqMAueEeiLO-Oskdhn1g"/>
+      <include xmi:type="uml:Include" xmi:id="_fy1TsAugEeiLO-Oskdhn1g" addition="_gMSncAueEeiLO-Oskdhn1g"/>
+      <include xmi:type="uml:Include" xmi:id="_1cp70AugEeiLO-Oskdhn1g" addition="_njgsoAueEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_gMSncAueEeiLO-Oskdhn1g" name="Receive Ticket"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_hwMqMAueEeiLO-Oskdhn1g" name="Make Payment">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_MJaD0A1SEeiz-_dtMtmRMw" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_NdqhAA1SEeiz-_dtMtmRMw" name="ExtensionPoint2"/>
+      <include xmi:type="uml:Include" xmi:id="_TWRjoA3VEei-x6_Tpm9R-Q" addition="_phvT4AueEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_lTApoAueEeiLO-Oskdhn1g" name="Confirm Reservation"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_njgsoAueEeiLO-Oskdhn1g" name="Select Flight">
+      <include xmi:type="uml:Include" xmi:id="_nlOfwA1SEeiz-_dtMtmRMw" addition="_GDZL8AueEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_phvT4AueEeiLO-Oskdhn1g" name="Log in">
+      <include xmi:type="uml:Include" xmi:id="_Ybjc0A1QEeiz-_dtMtmRMw" addition="_QwdyoAueEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_zb1lgAueEeiLO-Oskdhn1g" name="Flight Cancellation">
+      <include xmi:type="uml:Include" xmi:id="_pGOKoAugEeiLO-Oskdhn1g" addition="_phvT4AueEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_AxrlQAufEeiLO-Oskdhn1g" name="View Flight Information"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_D3s7AAufEeiLO-Oskdhn1g" name="Update Flight"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FqwNAAufEeiLO-Oskdhn1g" name="View Order"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_UufTwA3VEei-x6_Tpm9R-Q" name="Add Flight">
+      <generalization xmi:type="uml:Generalization" xmi:id="_cxuxcA3VEei-x6_Tpm9R-Q" general="_D3s7AAufEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_WuzlsA3VEei-x6_Tpm9R-Q" name="Modify Flight">
+      <generalization xmi:type="uml:Generalization" xmi:id="_dnFsIA3VEei-x6_Tpm9R-Q" general="_D3s7AAufEeiLO-Oskdhn1g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ZwGMcA3VEei-x6_Tpm9R-Q" name="Delete Flight">
+      <generalization xmi:type="uml:Generalization" xmi:id="_ebPs8A3VEei-x6_Tpm9R-Q" general="_D3s7AAufEeiLO-Oskdhn1g"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_5yRjIAueEeiLO-Oskdhn1g" name="Employee"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4dPNYAufEeiLO-Oskdhn1g" memberEnd="_4dPNYwufEeiLO-Oskdhn1g _4dPNZAufEeiLO-Oskdhn1g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4dPNYQufEeiLO-Oskdhn1g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4dPNYgufEeiLO-Oskdhn1g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4dPNYwufEeiLO-Oskdhn1g" name="customer" type="_80d-QAudEeiLO-Oskdhn1g" association="_4dPNYAufEeiLO-Oskdhn1g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4dPNZAufEeiLO-Oskdhn1g" name="flight reservation" type="_TK8RAAueEeiLO-Oskdhn1g" association="_4dPNYAufEeiLO-Oskdhn1g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8UDt8AufEeiLO-Oskdhn1g" memberEnd="_8UDt8wufEeiLO-Oskdhn1g _8UDt9AufEeiLO-Oskdhn1g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8UDt8QufEeiLO-Oskdhn1g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8UDt8gufEeiLO-Oskdhn1g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8UDt8wufEeiLO-Oskdhn1g" name="customer" type="_80d-QAudEeiLO-Oskdhn1g" association="_8UDt8AufEeiLO-Oskdhn1g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8UDt9AufEeiLO-Oskdhn1g" name="user registration" type="_QwdyoAueEeiLO-Oskdhn1g" association="_8UDt8AufEeiLO-Oskdhn1g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-QuO8AufEeiLO-Oskdhn1g" memberEnd="_-QuO8wufEeiLO-Oskdhn1g _-QuO9AufEeiLO-Oskdhn1g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-QuO8QufEeiLO-Oskdhn1g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-QuO8gufEeiLO-Oskdhn1g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-QuO8wufEeiLO-Oskdhn1g" name="customer" type="_80d-QAudEeiLO-Oskdhn1g" association="_-QuO8AufEeiLO-Oskdhn1g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-QuO9AufEeiLO-Oskdhn1g" name="flight cancellation" type="_zb1lgAueEeiLO-Oskdhn1g" association="_-QuO8AufEeiLO-Oskdhn1g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BHH0UAugEeiLO-Oskdhn1g" memberEnd="_BHH0UwugEeiLO-Oskdhn1g _BHH0VAugEeiLO-Oskdhn1g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BHH0UQugEeiLO-Oskdhn1g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BHH0UgugEeiLO-Oskdhn1g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BHH0UwugEeiLO-Oskdhn1g" name="view information" type="_AxrlQAufEeiLO-Oskdhn1g" association="_BHH0UAugEeiLO-Oskdhn1g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_BHH0VAugEeiLO-Oskdhn1g" name="manager" type="_5yRjIAueEeiLO-Oskdhn1g" association="_BHH0UAugEeiLO-Oskdhn1g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FRSusAugEeiLO-Oskdhn1g" memberEnd="_FRSuswugEeiLO-Oskdhn1g _FRSutAugEeiLO-Oskdhn1g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FRSusQugEeiLO-Oskdhn1g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FRSusgugEeiLO-Oskdhn1g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_FRSuswugEeiLO-Oskdhn1g" name="manager" type="_5yRjIAueEeiLO-Oskdhn1g" association="_FRSusAugEeiLO-Oskdhn1g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_FRSutAugEeiLO-Oskdhn1g" name="update flight" type="_D3s7AAufEeiLO-Oskdhn1g" association="_FRSusAugEeiLO-Oskdhn1g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GjdhMAugEeiLO-Oskdhn1g" memberEnd="_GjmrIgugEeiLO-Oskdhn1g _GjmrIwugEeiLO-Oskdhn1g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GjmrIAugEeiLO-Oskdhn1g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GjmrIQugEeiLO-Oskdhn1g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GjmrIgugEeiLO-Oskdhn1g" name="manager" type="_5yRjIAueEeiLO-Oskdhn1g" association="_GjdhMAugEeiLO-Oskdhn1g"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GjmrIwugEeiLO-Oskdhn1g" name="view orders" type="_FqwNAAufEeiLO-Oskdhn1g" association="_GjdhMAugEeiLO-Oskdhn1g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cYisQA1PEeiz-_dtMtmRMw" memberEnd="_cZBNYA1PEeiz-_dtMtmRMw _cZDCkA1PEeiz-_dtMtmRMw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cY4DcA1PEeiz-_dtMtmRMw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cY4DcQ1PEeiz-_dtMtmRMw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cZBNYA1PEeiz-_dtMtmRMw" name="search flight" type="_GDZL8AueEeiLO-Oskdhn1g" association="_cYisQA1PEeiz-_dtMtmRMw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cZDCkA1PEeiz-_dtMtmRMw" name="customer" type="_80d-QAudEeiLO-Oskdhn1g" association="_cYisQA1PEeiz-_dtMtmRMw"/>
+  </packagedElement>
+</uml:Model>
