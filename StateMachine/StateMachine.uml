@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_DxHUECfpEeiMCbFd7qnYkw" name="StateMachine">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ENgVICfpEeiMCbFd7qnYkw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_D4S6ICfpEeiMCbFd7qnYkw" name="Seat">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_FrPFICfuEeiMCbFd7qnYkw" name="Customer">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Cy-roCt9EeieepNkaq9ZIA" name="/Set customer information" method="_DRB5kCt9EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Qwg9gCt9EeieepNkaq9ZIA" name="/Check customer information format" method="_ROkLcCt9EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jrYsECt9EeieepNkaq9ZIA" name="/Input credential" method="_j-3owCt9EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_616R8Ct9EeieepNkaq9ZIA" name="/Validate credential" method="_7AB3QCt9EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_J59f8Ct-EeieepNkaq9ZIA" name="/Destroy the object" method="_KO8RcCt-EeieepNkaq9ZIA"/>
+      <region xmi:type="uml:Region" xmi:id="_FrPFISfuEeiMCbFd7qnYkw" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFIifuEeiMCbFd7qnYkw" source="_FrPFLyfuEeiMCbFd7qnYkw" target="_FrPFMSfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFIyfuEeiMCbFd7qnYkw" source="_FrPFNyfuEeiMCbFd7qnYkw" target="_FrPFNSfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFJCfuEeiMCbFd7qnYkw" source="_FrPFMCfuEeiMCbFd7qnYkw" target="_FrPFOCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFJSfuEeiMCbFd7qnYkw" name="departureDate>today" source="_FrPFMSfuEeiMCbFd7qnYkw" target="_FrPFMCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFJifuEeiMCbFd7qnYkw" name="cancelBooking" source="_FrPFOifuEeiMCbFd7qnYkw" target="_FrPFOyfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFJyfuEeiMCbFd7qnYkw" name="bookFlight" source="_FrPFOyfuEeiMCbFd7qnYkw" target="_FrPFOifuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFKCfuEeiMCbFd7qnYkw" name="confirmBooking" source="_FrPFOyfuEeiMCbFd7qnYkw" target="_FrPFPCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFKSfuEeiMCbFd7qnYkw" name="addSeat" source="_FrPFOyfuEeiMCbFd7qnYkw" target="_FrPFOyfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFKifuEeiMCbFd7qnYkw" name="deleteSeat" source="_FrPFOyfuEeiMCbFd7qnYkw" target="_FrPFOyfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFKyfuEeiMCbFd7qnYkw" name="makePayment" source="_FrPFPCfuEeiMCbFd7qnYkw" target="_FrPFPSfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFLCfuEeiMCbFd7qnYkw" name="departureDate>today" source="_FrPFPSfuEeiMCbFd7qnYkw" target="_FrPFPifuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFLSfuEeiMCbFd7qnYkw" name="cancelBooking" source="_FrPFPSfuEeiMCbFd7qnYkw" target="_FrPFPifuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FrPFLifuEeiMCbFd7qnYkw" source="_FrPFPifuEeiMCbFd7qnYkw" target="_FrPFPyfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_m396UCfvEeiMCbFd7qnYkw" name="modifyInformation()" source="_7Hu0sCfuEeiMCbFd7qnYkw" target="_7Hu0sCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_6O0aQCfvEeiMCbFd7qnYkw" name="enterInformation()" source="_7Hu0sCfuEeiMCbFd7qnYkw" target="_7Hu0sCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_R1-40CfwEeiMCbFd7qnYkw" name="submit()" source="_7Hu0sCfuEeiMCbFd7qnYkw" target="_Ap41sCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_dU5MICfwEeiMCbFd7qnYkw" name="approved=true" source="_Ap41sCfvEeiMCbFd7qnYkw" target="_ECl24CfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_huS1UCfwEeiMCbFd7qnYkw" name="approved=false" source="_Ap41sCfvEeiMCbFd7qnYkw" target="_7Hu0sCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_rsXA8CfwEeiMCbFd7qnYkw" name="submit()" source="_HmwhMCfvEeiMCbFd7qnYkw" target="_MASGMCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_v_dN0CfwEeiMCbFd7qnYkw" name="loggedIn=false" source="_MASGMCfvEeiMCbFd7qnYkw" target="_HmwhMCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_5E_2ACfwEeiMCbFd7qnYkw" name="loggedIn=true" source="_MASGMCfvEeiMCbFd7qnYkw" target="_TY22QCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_9x5C8CfwEeiMCbFd7qnYkw" name="deRegister()" source="_TY22QCfvEeiMCbFd7qnYkw" target="_Wt9J0CfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Bcj94CfxEeiMCbFd7qnYkw" name="booking()" source="_TY22QCfvEeiMCbFd7qnYkw" target="_TY22QCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_HwVpECfxEeiMCbFd7qnYkw" name="cancelBooking()" source="_TY22QCfvEeiMCbFd7qnYkw" target="_TY22QCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_RXABUCfxEeiMCbFd7qnYkw" name="makePayment()" source="_TY22QCfvEeiMCbFd7qnYkw" target="_TY22QCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_dKnZUCfxEeiMCbFd7qnYkw" name="sessionExpired=true" source="_TY22QCfvEeiMCbFd7qnYkw" target="_ECl24CfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_mUl1kCfxEeiMCbFd7qnYkw" name="logout()" source="_TY22QCfvEeiMCbFd7qnYkw" target="_ECl24CfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_z1lVYCfxEeiMCbFd7qnYkw" name="logIn()" source="_ECl24CfvEeiMCbFd7qnYkw" target="_HmwhMCfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_fmlQACfyEeiMCbFd7qnYkw" name="time>attempDurationTime" source="_HmwhMCfvEeiMCbFd7qnYkw" target="_ECl24CfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_rgHCwCfyEeiMCbFd7qnYkw" source="_Wt9J0CfvEeiMCbFd7qnYkw" target="_qjCWgCfyEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FkMS4CpoEei6QLmVyK19bg" source="_sy0D8CpnEei6QLmVyK19bg" target="_7Hu0sCfuEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Y1RlMCpsEei6QLmVyK19bg" name="attemptNum>maxAttemptNum" source="_HmwhMCfvEeiMCbFd7qnYkw" target="_ECl24CfvEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_UhRj8CptEei6QLmVyK19bg" name="deleteCustomer()" source="_ECl24CfvEeiMCbFd7qnYkw" target="_Wt9J0CfvEeiMCbFd7qnYkw"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_FrPFLyfuEeiMCbFd7qnYkw" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFMCfuEeiMCbFd7qnYkw" name="Expired"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFMSfuEeiMCbFd7qnYkw" name="State1">
+          <region xmi:type="uml:Region" xmi:id="_FrPFMifuEeiMCbFd7qnYkw" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_FrPFMyfuEeiMCbFd7qnYkw" name="cancelBooking" source="_FrPFNSfuEeiMCbFd7qnYkw" target="_FrPFNifuEeiMCbFd7qnYkw"/>
+            <transition xmi:type="uml:Transition" xmi:id="_FrPFNCfuEeiMCbFd7qnYkw" name="addSeat" source="_FrPFNifuEeiMCbFd7qnYkw" target="_FrPFNSfuEeiMCbFd7qnYkw"/>
+            <subvertex xmi:type="uml:State" xmi:id="_FrPFNSfuEeiMCbFd7qnYkw" name="ReadyToBook"/>
+            <subvertex xmi:type="uml:State" xmi:id="_FrPFNifuEeiMCbFd7qnYkw" name="Booked"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_FrPFNyfuEeiMCbFd7qnYkw" name="Initial2"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_FrPFOCfuEeiMCbFd7qnYkw" name="FinalState1"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_FrPFOSfuEeiMCbFd7qnYkw" name="Initial"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFOifuEeiMCbFd7qnYkw" name="ReadyToBook"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFOyfuEeiMCbFd7qnYkw" name="Booking"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFPCfuEeiMCbFd7qnYkw" name="Payment"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFPSfuEeiMCbFd7qnYkw" name="Booked"/>
+        <subvertex xmi:type="uml:State" xmi:id="_FrPFPifuEeiMCbFd7qnYkw" name="Closed"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_FrPFPyfuEeiMCbFd7qnYkw" name="FinalState2"/>
+        <subvertex xmi:type="uml:State" xmi:id="_7Hu0sCfuEeiMCbFd7qnYkw" name="Registering">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ESfWkCt9EeieepNkaq9ZIA" annotatedElement="_7Hu0sCfuEeiMCbFd7qnYkw">
+            <body>/Set customer information</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_DRB5kCt9EeieepNkaq9ZIA" name="/Set customer information" specification="_Cy-roCt9EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_Ap41sCfvEeiMCbFd7qnYkw" name="Verification">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_SXUjQCt9EeieepNkaq9ZIA" annotatedElement="_Ap41sCfvEeiMCbFd7qnYkw">
+            <body>/Check customer information format</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_ROkLcCt9EeieepNkaq9ZIA" name="/Check customer information format" specification="_Qwg9gCt9EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_ECl24CfvEeiMCbFd7qnYkw" name="Registered"/>
+        <subvertex xmi:type="uml:State" xmi:id="_HmwhMCfvEeiMCbFd7qnYkw" name="LogingIn">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_kzY18Ct9EeieepNkaq9ZIA" annotatedElement="_HmwhMCfvEeiMCbFd7qnYkw">
+            <body>/Input credential</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_j-3owCt9EeieepNkaq9ZIA" name="/Input credential" specification="_jrYsECt9EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_MASGMCfvEeiMCbFd7qnYkw" name="Validation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_8E50oCt9EeieepNkaq9ZIA" annotatedElement="_MASGMCfvEeiMCbFd7qnYkw">
+            <body>/Validate credential</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_7AB3QCt9EeieepNkaq9ZIA" name="/Validate credential" specification="_616R8Ct9EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_TY22QCfvEeiMCbFd7qnYkw" name="LoggedIn"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Wt9J0CfvEeiMCbFd7qnYkw" name="NotRegistered">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_LKTGcCt-EeieepNkaq9ZIA" annotatedElement="_Wt9J0CfvEeiMCbFd7qnYkw">
+            <body>/Destroy the object</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_KO8RcCt-EeieepNkaq9ZIA" name="/Destroy the object" specification="_J59f8Ct-EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_qjCWgCfyEeiMCbFd7qnYkw" name="FinalState"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_sy0D8CpnEei6QLmVyK19bg" name="Initial"/>
+      </region>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_1MMGgCfyEeiMCbFd7qnYkw" name="Booking">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_1MMGgSfyEeiMCbFd7qnYkw" name="Customer">
+        <region xmi:type="uml:Region" xmi:id="_1MMGgifyEeiMCbFd7qnYkw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGgyfyEeiMCbFd7qnYkw" source="_1MMGoifyEeiMCbFd7qnYkw" target="_1MMGpCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGhCfyEeiMCbFd7qnYkw" source="_1MMGqifyEeiMCbFd7qnYkw" target="_1MMGqCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGhSfyEeiMCbFd7qnYkw" source="_1MMGoyfyEeiMCbFd7qnYkw" target="_1MMGqyfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGhifyEeiMCbFd7qnYkw" name="departureDate>today" source="_1MMGpCfyEeiMCbFd7qnYkw" target="_1MMGoyfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGhyfyEeiMCbFd7qnYkw" name="cancelBooking" source="_1MMGrSfyEeiMCbFd7qnYkw" target="_1MMGrifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGiCfyEeiMCbFd7qnYkw" name="bookFlight" source="_1MMGrifyEeiMCbFd7qnYkw" target="_1MMGrSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGiSfyEeiMCbFd7qnYkw" name="confirmBooking" source="_1MMGrifyEeiMCbFd7qnYkw" target="_1MMGryfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGiifyEeiMCbFd7qnYkw" name="addSeat" source="_1MMGrifyEeiMCbFd7qnYkw" target="_1MMGrifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGiyfyEeiMCbFd7qnYkw" name="deleteSeat" source="_1MMGrifyEeiMCbFd7qnYkw" target="_1MMGrifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGjCfyEeiMCbFd7qnYkw" name="makePayment" source="_1MMGryfyEeiMCbFd7qnYkw" target="_1MMGsCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGjSfyEeiMCbFd7qnYkw" name="departureDate>today" source="_1MMGsCfyEeiMCbFd7qnYkw" target="_1MMGsSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGjifyEeiMCbFd7qnYkw" name="cancelBooking" source="_1MMGsCfyEeiMCbFd7qnYkw" target="_1MMGsSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGjyfyEeiMCbFd7qnYkw" source="_1MMGsSfyEeiMCbFd7qnYkw" target="_1MMGsifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGkCfyEeiMCbFd7qnYkw" name="modifyI nformation" source="_1MMGsyfyEeiMCbFd7qnYkw" target="_1MMGsyfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGkSfyEeiMCbFd7qnYkw" name="enterInformation" source="_1MMGsyfyEeiMCbFd7qnYkw" target="_1MMGsyfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGkifyEeiMCbFd7qnYkw" name="submit" source="_1MMGsyfyEeiMCbFd7qnYkw" target="_1MMGtCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGkyfyEeiMCbFd7qnYkw" name="approve" source="_1MMGtCfyEeiMCbFd7qnYkw" target="_1MMGtSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGlCfyEeiMCbFd7qnYkw" name="disappear" source="_1MMGtCfyEeiMCbFd7qnYkw" target="_1MMGsyfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGlSfyEeiMCbFd7qnYkw" name="submit" source="_1MMGtifyEeiMCbFd7qnYkw" target="_1MMGtyfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGlifyEeiMCbFd7qnYkw" name="loggedIn=false" source="_1MMGtyfyEeiMCbFd7qnYkw" target="_1MMGtifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGlyfyEeiMCbFd7qnYkw" name="loggedIn=true" source="_1MMGtyfyEeiMCbFd7qnYkw" target="_1MMGuCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGmCfyEeiMCbFd7qnYkw" name="deregister" source="_1MMGuCfyEeiMCbFd7qnYkw" target="_1MMGuSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGmSfyEeiMCbFd7qnYkw" name="booking" source="_1MMGuCfyEeiMCbFd7qnYkw" target="_1MMGuCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGmifyEeiMCbFd7qnYkw" name="cancelBooking" source="_1MMGuCfyEeiMCbFd7qnYkw" target="_1MMGuCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGmyfyEeiMCbFd7qnYkw" name="makepayment" source="_1MMGuCfyEeiMCbFd7qnYkw" target="_1MMGuCfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGnCfyEeiMCbFd7qnYkw" name="sessionExpired" source="_1MMGuCfyEeiMCbFd7qnYkw" target="_1MMGtSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGnSfyEeiMCbFd7qnYkw" name="logOut" source="_1MMGuCfyEeiMCbFd7qnYkw" target="_1MMGtSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGnifyEeiMCbFd7qnYkw" name="logIn" source="_1MMGtSfyEeiMCbFd7qnYkw" target="_1MMGtifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGnyfyEeiMCbFd7qnYkw" name="attempNumber>maxAttemp" source="_1MMGtifyEeiMCbFd7qnYkw" target="_1MMGtSfyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGoCfyEeiMCbFd7qnYkw" name="time>attempDurationTime" source="_1MMGtyfyEeiMCbFd7qnYkw" target="_1MMGtifyEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_1MMGoSfyEeiMCbFd7qnYkw" source="_1MMGuSfyEeiMCbFd7qnYkw" target="_1MMGuifyEeiMCbFd7qnYkw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_1MMGoifyEeiMCbFd7qnYkw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGoyfyEeiMCbFd7qnYkw" name="Expired"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGpCfyEeiMCbFd7qnYkw" name="State1">
+            <region xmi:type="uml:Region" xmi:id="_1MMGpSfyEeiMCbFd7qnYkw" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_1MMGpifyEeiMCbFd7qnYkw" name="cancelBooking" source="_1MMGqCfyEeiMCbFd7qnYkw" target="_1MMGqSfyEeiMCbFd7qnYkw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_1MMGpyfyEeiMCbFd7qnYkw" name="addSeat" source="_1MMGqSfyEeiMCbFd7qnYkw" target="_1MMGqCfyEeiMCbFd7qnYkw"/>
+              <subvertex xmi:type="uml:State" xmi:id="_1MMGqCfyEeiMCbFd7qnYkw" name="ReadyToBook"/>
+              <subvertex xmi:type="uml:State" xmi:id="_1MMGqSfyEeiMCbFd7qnYkw" name="Booked"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_1MMGqifyEeiMCbFd7qnYkw" name="Initial2"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_1MMGqyfyEeiMCbFd7qnYkw" name="FinalState1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_1MMGrCfyEeiMCbFd7qnYkw" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGrSfyEeiMCbFd7qnYkw" name="ReadyToBook"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGrifyEeiMCbFd7qnYkw" name="Booking"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGryfyEeiMCbFd7qnYkw" name="Payment"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGsCfyEeiMCbFd7qnYkw" name="Booked"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGsSfyEeiMCbFd7qnYkw" name="Closed"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_1MMGsifyEeiMCbFd7qnYkw" name="FinalState2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGsyfyEeiMCbFd7qnYkw" name="Registering"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGtCfyEeiMCbFd7qnYkw" name="verification"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGtSfyEeiMCbFd7qnYkw" name="Registered"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGtifyEeiMCbFd7qnYkw" name="LogingIn"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGtyfyEeiMCbFd7qnYkw" name="Verification"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGuCfyEeiMCbFd7qnYkw" name="LoggedIn"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1MMGuSfyEeiMCbFd7qnYkw" name="NotRegistered"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_1MMGuifyEeiMCbFd7qnYkw" name="FinalState3"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_kOdZYCt8EeieepNkaq9ZIA" name="/Seat booking refrence" method="_kYSDwCt8EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_tOXToCt8EeieepNkaq9ZIA" name="Print ticket" method="_tngMYCt8EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_14smgCt8EeieepNkaq9ZIA" name="Destroy the object" method="_2EvecCt8EeieepNkaq9ZIA"/>
+      <region xmi:type="uml:Region" xmi:id="_1MMGuyfyEeiMCbFd7qnYkw" name="Booking">
+        <transition xmi:type="uml:Transition" xmi:id="_1MMGvCfyEeiMCbFd7qnYkw" source="_1MMGwCfyEeiMCbFd7qnYkw" target="_1MMGwifyEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_1MMGvSfyEeiMCbFd7qnYkw" source="_1MMGyCfyEeiMCbFd7qnYkw" target="_1MMGxifyEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_1MMGvifyEeiMCbFd7qnYkw" source="_1MMGwSfyEeiMCbFd7qnYkw" target="_1MMGySfyEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_1MMGvyfyEeiMCbFd7qnYkw" name="departureDate>today" source="_1MMGwifyEeiMCbFd7qnYkw" target="_1MMGwSfyEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_mmyG4CfzEeiMCbFd7qnYkw" source="_h4i2ICfzEeiMCbFd7qnYkw" target="_lxp1sCfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_qFheoCfzEeiMCbFd7qnYkw" name="makePayment()" source="_aTUKICfzEeiMCbFd7qnYkw" target="_eVfmICfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_0c9zkCfzEeiMCbFd7qnYkw" name="bookFlight()" source="_VeyEICfzEeiMCbFd7qnYkw" target="_YESt0CfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_2uTkECfzEeiMCbFd7qnYkw" name="cancelBooking()" source="_YESt0CfzEeiMCbFd7qnYkw" target="_VeyEICfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="__N_GICfzEeiMCbFd7qnYkw" name="confirmBooking()" source="_YESt0CfzEeiMCbFd7qnYkw" target="_aTUKICfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Dk74QCf0EeiMCbFd7qnYkw" name="addSeat()" source="_YESt0CfzEeiMCbFd7qnYkw" target="_YESt0CfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_InhBUCf0EeiMCbFd7qnYkw" name="deleteSeat()" source="_YESt0CfzEeiMCbFd7qnYkw" target="_YESt0CfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_XRvaECf0EeiMCbFd7qnYkw" name="departureDate>today" source="_eVfmICfzEeiMCbFd7qnYkw" target="_h4i2ICfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_aoFDwCf0EeiMCbFd7qnYkw" name="cancelBooking()" source="_eVfmICfzEeiMCbFd7qnYkw" target="_h4i2ICfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_i9E_0Cf0EeiMCbFd7qnYkw" source="_U9hKICfzEeiMCbFd7qnYkw" target="_VeyEICfzEeiMCbFd7qnYkw"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_1MMGwCfyEeiMCbFd7qnYkw" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1MMGwSfyEeiMCbFd7qnYkw" name="Expired"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1MMGwifyEeiMCbFd7qnYkw" name="State1">
+          <region xmi:type="uml:Region" xmi:id="_1MMGwyfyEeiMCbFd7qnYkw" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_1MMGxCfyEeiMCbFd7qnYkw" name="cancelBooking" source="_1MMGxifyEeiMCbFd7qnYkw" target="_1MMGxyfyEeiMCbFd7qnYkw"/>
+            <transition xmi:type="uml:Transition" xmi:id="_1MMGxSfyEeiMCbFd7qnYkw" name="addSeat" source="_1MMGxyfyEeiMCbFd7qnYkw" target="_1MMGxifyEeiMCbFd7qnYkw"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1MMGxifyEeiMCbFd7qnYkw" name="ReadyToBook"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1MMGxyfyEeiMCbFd7qnYkw" name="Booked"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_1MMGyCfyEeiMCbFd7qnYkw" name="Initial2"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_1MMGySfyEeiMCbFd7qnYkw" name="FinalState1"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_U9hKICfzEeiMCbFd7qnYkw" name="Initial"/>
+        <subvertex xmi:type="uml:State" xmi:id="_VeyEICfzEeiMCbFd7qnYkw" name="ReadyToBook">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ltYOcCt8EeieepNkaq9ZIA" annotatedElement="_VeyEICfzEeiMCbFd7qnYkw">
+            <body>/Seat booking refrence</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_kYSDwCt8EeieepNkaq9ZIA" name="/Set booking refrence" specification="_kOdZYCt8EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_YESt0CfzEeiMCbFd7qnYkw" name="Booking"/>
+        <subvertex xmi:type="uml:State" xmi:id="_aTUKICfzEeiMCbFd7qnYkw" name="Payment"/>
+        <subvertex xmi:type="uml:State" xmi:id="_eVfmICfzEeiMCbFd7qnYkw" name="Booked">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_us1cwCt8EeieepNkaq9ZIA" annotatedElement="_eVfmICfzEeiMCbFd7qnYkw">
+            <body>Print ticket</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_tngMYCt8EeieepNkaq9ZIA" name="Print ticket" specification="_tOXToCt8EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_h4i2ICfzEeiMCbFd7qnYkw" name="Closed">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_3B5DMCt8EeieepNkaq9ZIA" annotatedElement="_h4i2ICfzEeiMCbFd7qnYkw">
+            <body>Destroy the object</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_2EvecCt8EeieepNkaq9ZIA" name="/Destroy the object" specification="_14smgCt8EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_lxp1sCfzEeiMCbFd7qnYkw" name="FinalState"/>
+      </region>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CQnmICfzEeiMCbFd7qnYkw" name="ScheduledFlight">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_CQnmISfzEeiMCbFd7qnYkw" name="Customer">
+        <region xmi:type="uml:Region" xmi:id="_CQnmIifzEeiMCbFd7qnYkw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmIyfzEeiMCbFd7qnYkw" source="_CQnmQifzEeiMCbFd7qnYkw" target="_CQnmRCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmJCfzEeiMCbFd7qnYkw" source="_CQnmSifzEeiMCbFd7qnYkw" target="_CQnmSCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmJSfzEeiMCbFd7qnYkw" source="_CQnmQyfzEeiMCbFd7qnYkw" target="_CQnmSyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmJifzEeiMCbFd7qnYkw" name="departureDate>today" source="_CQnmRCfzEeiMCbFd7qnYkw" target="_CQnmQyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmJyfzEeiMCbFd7qnYkw" name="cancelBooking" source="_CQnmTSfzEeiMCbFd7qnYkw" target="_CQnmTifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmKCfzEeiMCbFd7qnYkw" name="bookFlight" source="_CQnmTifzEeiMCbFd7qnYkw" target="_CQnmTSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmKSfzEeiMCbFd7qnYkw" name="confirmBooking" source="_CQnmTifzEeiMCbFd7qnYkw" target="_CQnmTyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmKifzEeiMCbFd7qnYkw" name="addSeat" source="_CQnmTifzEeiMCbFd7qnYkw" target="_CQnmTifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmKyfzEeiMCbFd7qnYkw" name="deleteSeat" source="_CQnmTifzEeiMCbFd7qnYkw" target="_CQnmTifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmLCfzEeiMCbFd7qnYkw" name="makePayment" source="_CQnmTyfzEeiMCbFd7qnYkw" target="_CQnmUCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmLSfzEeiMCbFd7qnYkw" name="departureDate>today" source="_CQnmUCfzEeiMCbFd7qnYkw" target="_CQnmUSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmLifzEeiMCbFd7qnYkw" name="cancelBooking" source="_CQnmUCfzEeiMCbFd7qnYkw" target="_CQnmUSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmLyfzEeiMCbFd7qnYkw" source="_CQnmUSfzEeiMCbFd7qnYkw" target="_CQnmUifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmMCfzEeiMCbFd7qnYkw" name="modifyI nformation" source="_CQnmUyfzEeiMCbFd7qnYkw" target="_CQnmUyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmMSfzEeiMCbFd7qnYkw" name="enterInformation" source="_CQnmUyfzEeiMCbFd7qnYkw" target="_CQnmUyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmMifzEeiMCbFd7qnYkw" name="submit" source="_CQnmUyfzEeiMCbFd7qnYkw" target="_CQnmVCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmMyfzEeiMCbFd7qnYkw" name="approve" source="_CQnmVCfzEeiMCbFd7qnYkw" target="_CQnmVSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmNCfzEeiMCbFd7qnYkw" name="disappear" source="_CQnmVCfzEeiMCbFd7qnYkw" target="_CQnmUyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmNSfzEeiMCbFd7qnYkw" name="submit" source="_CQnmVifzEeiMCbFd7qnYkw" target="_CQnmVyfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmNifzEeiMCbFd7qnYkw" name="loggedIn=false" source="_CQnmVyfzEeiMCbFd7qnYkw" target="_CQnmVifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmNyfzEeiMCbFd7qnYkw" name="loggedIn=true" source="_CQnmVyfzEeiMCbFd7qnYkw" target="_CQnmWCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmOCfzEeiMCbFd7qnYkw" name="deregister" source="_CQnmWCfzEeiMCbFd7qnYkw" target="_CQnmWSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmOSfzEeiMCbFd7qnYkw" name="booking" source="_CQnmWCfzEeiMCbFd7qnYkw" target="_CQnmWCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmOifzEeiMCbFd7qnYkw" name="cancelBooking" source="_CQnmWCfzEeiMCbFd7qnYkw" target="_CQnmWCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmOyfzEeiMCbFd7qnYkw" name="makepayment" source="_CQnmWCfzEeiMCbFd7qnYkw" target="_CQnmWCfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmPCfzEeiMCbFd7qnYkw" name="sessionExpired" source="_CQnmWCfzEeiMCbFd7qnYkw" target="_CQnmVSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmPSfzEeiMCbFd7qnYkw" name="logOut" source="_CQnmWCfzEeiMCbFd7qnYkw" target="_CQnmVSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmPifzEeiMCbFd7qnYkw" name="logIn" source="_CQnmVSfzEeiMCbFd7qnYkw" target="_CQnmVifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmPyfzEeiMCbFd7qnYkw" name="attempNumber>maxAttemp" source="_CQnmVifzEeiMCbFd7qnYkw" target="_CQnmVSfzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmQCfzEeiMCbFd7qnYkw" name="time>attempDurationTime" source="_CQnmVyfzEeiMCbFd7qnYkw" target="_CQnmVifzEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_CQnmQSfzEeiMCbFd7qnYkw" source="_CQnmWSfzEeiMCbFd7qnYkw" target="_CQnmWifzEeiMCbFd7qnYkw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_CQnmQifzEeiMCbFd7qnYkw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmQyfzEeiMCbFd7qnYkw" name="Expired"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmRCfzEeiMCbFd7qnYkw" name="State1">
+            <region xmi:type="uml:Region" xmi:id="_CQnmRSfzEeiMCbFd7qnYkw" name="Region1">
+              <transition xmi:type="uml:Transition" xmi:id="_CQnmRifzEeiMCbFd7qnYkw" name="cancelBooking" source="_CQnmSCfzEeiMCbFd7qnYkw" target="_CQnmSSfzEeiMCbFd7qnYkw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_CQnmRyfzEeiMCbFd7qnYkw" name="addSeat" source="_CQnmSSfzEeiMCbFd7qnYkw" target="_CQnmSCfzEeiMCbFd7qnYkw"/>
+              <subvertex xmi:type="uml:State" xmi:id="_CQnmSCfzEeiMCbFd7qnYkw" name="ReadyToBook"/>
+              <subvertex xmi:type="uml:State" xmi:id="_CQnmSSfzEeiMCbFd7qnYkw" name="Booked"/>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_CQnmSifzEeiMCbFd7qnYkw" name="Initial2"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_CQnmSyfzEeiMCbFd7qnYkw" name="FinalState1"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_CQnmTCfzEeiMCbFd7qnYkw" name="Initial"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmTSfzEeiMCbFd7qnYkw" name="ReadyToBook"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmTifzEeiMCbFd7qnYkw" name="Booking"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmTyfzEeiMCbFd7qnYkw" name="Payment"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmUCfzEeiMCbFd7qnYkw" name="Booked"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmUSfzEeiMCbFd7qnYkw" name="Closed"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_CQnmUifzEeiMCbFd7qnYkw" name="FinalState2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmUyfzEeiMCbFd7qnYkw" name="Registering"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmVCfzEeiMCbFd7qnYkw" name="verification"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmVSfzEeiMCbFd7qnYkw" name="Registered"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmVifzEeiMCbFd7qnYkw" name="LogingIn"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmVyfzEeiMCbFd7qnYkw" name="Verification"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmWCfzEeiMCbFd7qnYkw" name="LoggedIn"/>
+          <subvertex xmi:type="uml:State" xmi:id="_CQnmWSfzEeiMCbFd7qnYkw" name="NotRegistered"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_CQnmWifzEeiMCbFd7qnYkw" name="FinalState3"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ECCnICt6EeieepNkaq9ZIA" name="/Assiagn flight number /departure time /seats to the the flight" method="_ELQ0kCt6EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_zvUKECt6EeieepNkaq9ZIA" name="/Destroy the object" method="_z7XCACt6EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WcDO4Ct7EeieepNkaq9ZIA" name="/Close the flight so no more booking is possible" method="_X5onMCt7EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uJGTACt7EeieepNkaq9ZIA" name="Keep track of available seats for booking"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Exs3kCt8EeieepNkaq9ZIA" name="Keep track of available seats for booking" method="_E9dboCt8EeieepNkaq9ZIA"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_V3odwCt8EeieepNkaq9ZIA" name="/Keep track of available seats for booking" method="_V_OTgCt8EeieepNkaq9ZIA"/>
+      <region xmi:type="uml:Region" xmi:id="_CQnmWyfzEeiMCbFd7qnYkw" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_CQnmXCfzEeiMCbFd7qnYkw" source="_CQnmYCfzEeiMCbFd7qnYkw" target="_CQnmYifzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_CQnmXSfzEeiMCbFd7qnYkw" source="_CQnmaCfzEeiMCbFd7qnYkw" target="_CQnmZifzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_CQnmXifzEeiMCbFd7qnYkw" source="_CQnmYSfzEeiMCbFd7qnYkw" target="_CQnmaSfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_CQnmXyfzEeiMCbFd7qnYkw" name="departureDate>today" source="_CQnmYifzEeiMCbFd7qnYkw" target="_CQnmYSfzEeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_x4xjECf0EeiMCbFd7qnYkw" source="_tft4ICf0EeiMCbFd7qnYkw" target="_t_dIICf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_G64q8Cf1EeiMCbFd7qnYkw" name="openBooking()" source="_t_dIICf0EeiMCbFd7qnYkw" target="_zEtxwCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_KZWV4Cf1EeiMCbFd7qnYkw" name="modifyFlight()" source="_t_dIICf0EeiMCbFd7qnYkw" target="_t_dIICf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_S6vvMCf1EeiMCbFd7qnYkw" name="passengerNumber>minimum" source="_zEtxwCf0EeiMCbFd7qnYkw" target="_313zoCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_XY7xwCf1EeiMCbFd7qnYkw" name="bookSeat()" source="_313zoCf0EeiMCbFd7qnYkw" target="_313zoCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_tHhlICf1EeiMCbFd7qnYkw" name="passengerNumber=seatNumber" source="_313zoCf0EeiMCbFd7qnYkw" target="_6p2-MCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_zN7isCf1EeiMCbFd7qnYkw" name="closeBooking()" source="_313zoCf0EeiMCbFd7qnYkw" target="_6p2-MCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_7BgzwCf1EeiMCbFd7qnYkw" name="cancelFlight()" source="_6p2-MCf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="__6ps8Cf1EeiMCbFd7qnYkw" name="departureDate>today" source="_6p2-MCf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Gvs5MCf2EeiMCbFd7qnYkw" name="departureDate>today" source="_313zoCf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_UgDqsCf2EeiMCbFd7qnYkw" name="cancelFlight()" source="_313zoCf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_iT_7sCf2EeiMCbFd7qnYkw" name="cancelFlight()" source="_zEtxwCf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_sK_O8Cf2EeiMCbFd7qnYkw" name="departureDate>today" source="_zEtxwCf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_5Sge0Cf2EeiMCbFd7qnYkw" source="__yivQCf0EeiMCbFd7qnYkw" target="_CpKXECf1EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_C8ge8Cf3EeiMCbFd7qnYkw" name="bookSeat()" source="_zEtxwCf0EeiMCbFd7qnYkw" target="_zEtxwCf0EeiMCbFd7qnYkw"/>
+        <transition xmi:type="uml:Transition" xmi:id="_vYzVICpvEei6QLmVyK19bg" name="departureDate>today" source="_t_dIICf0EeiMCbFd7qnYkw" target="__yivQCf0EeiMCbFd7qnYkw"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_CQnmYCfzEeiMCbFd7qnYkw" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_CQnmYSfzEeiMCbFd7qnYkw" name="Expired"/>
+        <subvertex xmi:type="uml:State" xmi:id="_CQnmYifzEeiMCbFd7qnYkw" name="State1">
+          <region xmi:type="uml:Region" xmi:id="_CQnmYyfzEeiMCbFd7qnYkw" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_CQnmZCfzEeiMCbFd7qnYkw" name="cancelBooking" source="_CQnmZifzEeiMCbFd7qnYkw" target="_CQnmZyfzEeiMCbFd7qnYkw"/>
+            <transition xmi:type="uml:Transition" xmi:id="_CQnmZSfzEeiMCbFd7qnYkw" name="addSeat" source="_CQnmZyfzEeiMCbFd7qnYkw" target="_CQnmZifzEeiMCbFd7qnYkw"/>
+            <subvertex xmi:type="uml:State" xmi:id="_CQnmZifzEeiMCbFd7qnYkw" name="ReadyToBook"/>
+            <subvertex xmi:type="uml:State" xmi:id="_CQnmZyfzEeiMCbFd7qnYkw" name="Booked"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_CQnmaCfzEeiMCbFd7qnYkw" name="Initial2"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_CQnmaSfzEeiMCbFd7qnYkw" name="FinalState1"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_tft4ICf0EeiMCbFd7qnYkw" name="Initial"/>
+        <subvertex xmi:type="uml:State" xmi:id="_t_dIICf0EeiMCbFd7qnYkw" name="Scheduled ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Mdo6cCt6EeieepNkaq9ZIA" annotatedElement="_t_dIICf0EeiMCbFd7qnYkw">
+            <body>/Assiagn flight number&#xD;
+/departure time &#xD;
+/seats to the the flight</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_ELQ0kCt6EeieepNkaq9ZIA" name="/Assign flight number,departure time,and seats to the flight" specification="_ECCnICt6EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_zEtxwCf0EeiMCbFd7qnYkw" name="OpenNotEnoughPassenger">
+          <doActivity xmi:type="uml:Activity" xmi:id="_E9dboCt8EeieepNkaq9ZIA" name="/Keep track of available seats for booking" specification="_Exs3kCt8EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_313zoCf0EeiMCbFd7qnYkw" name="OpenEnoughPassenger">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_WwxFMCt8EeieepNkaq9ZIA" annotatedElement="_313zoCf0EeiMCbFd7qnYkw"/>
+          <doActivity xmi:type="uml:Activity" xmi:id="_V_OTgCt8EeieepNkaq9ZIA" name="/Keep track of available seats for booking" specification="_V3odwCt8EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_6p2-MCf0EeiMCbFd7qnYkw" name="Closed">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ZoeHkCt7EeieepNkaq9ZIA" annotatedElement="_6p2-MCf0EeiMCbFd7qnYkw">
+            <body>/Close the flight so no more booking is possible</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_X5onMCt7EeieepNkaq9ZIA" name="/Close the filght so no more booking is possible" specification="_WcDO4Ct7EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="__yivQCf0EeiMCbFd7qnYkw" name="Canceled">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_7bmgUCt6EeieepNkaq9ZIA" annotatedElement="__yivQCf0EeiMCbFd7qnYkw">
+            <body>/Destroy the object</body>
+          </ownedComment>
+          <doActivity xmi:type="uml:Activity" xmi:id="_z7XCACt6EeieepNkaq9ZIA" name="/Destroy the object" specification="_zvUKECt6EeieepNkaq9ZIA"/>
+        </subvertex>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_CpKXECf1EeiMCbFd7qnYkw" name="FinalState"/>
+      </region>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_XjHdQCt-EeieepNkaq9ZIA" name="/Assign seat number" method="_XtObgCt-EeieepNkaq9ZIA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_inkpMCt-EeieepNkaq9ZIA" name="/Destroy the object" method="_iv6F0Ct-EeieepNkaq9ZIA"/>
+    <region xmi:type="uml:Region" xmi:id="_D4l1ECfpEeiMCbFd7qnYkw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_eKUccCfpEeiMCbFd7qnYkw" source="_HzfkYCfpEeiMCbFd7qnYkw" target="_LrYb8CfpEeiMCbFd7qnYkw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_fjeAsCfpEeiMCbFd7qnYkw" source="_NxE9ICfpEeiMCbFd7qnYkw" target="_UALjsCfpEeiMCbFd7qnYkw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_wfigQCfpEeiMCbFd7qnYkw" source="_IJnlYCfpEeiMCbFd7qnYkw" target="_PRUA0CfpEeiMCbFd7qnYkw"/>
+      <transition xmi:type="uml:Transition" xmi:id="_xJ5E0CfpEeiMCbFd7qnYkw" name="departureDate>today" source="_LrYb8CfpEeiMCbFd7qnYkw" target="_IJnlYCfpEeiMCbFd7qnYkw"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_HzfkYCfpEeiMCbFd7qnYkw" name="Initial1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_IJnlYCfpEeiMCbFd7qnYkw" name="Expired">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_kIkh4Ct-EeieepNkaq9ZIA" annotatedElement="_IJnlYCfpEeiMCbFd7qnYkw">
+          <body>/Destroy the object</body>
+        </ownedComment>
+        <doActivity xmi:type="uml:Activity" xmi:id="_iv6F0Ct-EeieepNkaq9ZIA" name="/Destroy the object" specification="_inkpMCt-EeieepNkaq9ZIA"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_LrYb8CfpEeiMCbFd7qnYkw" name="BookingSupperState">
+        <region xmi:type="uml:Region" xmi:id="_UAJHcSfpEeiMCbFd7qnYkw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_tNpRsCfpEeiMCbFd7qnYkw" name="addSeat()" source="_UALjsCfpEeiMCbFd7qnYkw" target="_XpdXgCfpEeiMCbFd7qnYkw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vRuCQCfpEeiMCbFd7qnYkw" name="cancelBooking()" source="_XpdXgCfpEeiMCbFd7qnYkw" target="_UALjsCfpEeiMCbFd7qnYkw"/>
+          <subvertex xmi:type="uml:State" xmi:id="_UALjsCfpEeiMCbFd7qnYkw" name="ReadyToBook ">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_YpLtcCt-EeieepNkaq9ZIA" annotatedElement="_UALjsCfpEeiMCbFd7qnYkw">
+              <body>/Assign seat number</body>
+            </ownedComment>
+            <doActivity xmi:type="uml:Activity" xmi:id="_XtObgCt-EeieepNkaq9ZIA" name="/Assign seat number" specification="_XjHdQCt-EeieepNkaq9ZIA"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_XpdXgCfpEeiMCbFd7qnYkw" name="Booked"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_NxE9ICfpEeiMCbFd7qnYkw" name="Initial2"/>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_PRUA0CfpEeiMCbFd7qnYkw" name="FinalState"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_g4bMACfqEeiMCbFd7qnYkw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_g4bMASfqEeiMCbFd7qnYkw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
